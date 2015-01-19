@@ -1,0 +1,6 @@
+{
+  "$DOCKERHUB_API_URL": {
+    "auth": "$DOCKERHUB_AUTH",
+    "email": "$DOCKERHUB_EMAIL"
+  }
+}

@@ -1,0 +1,12 @@
+bower_components/
+browser_tests/
+ci_test_scripts/
+*/.DS_Store
+developer_test_scripts/
+fig.yml
+.git
+node_modules/
+*/__pycache__
+*/*.sqlite3
+*/*/static
+static-build/
