@@ -15,5 +15,7 @@ STATIC_CONTAINER=`docker run -d -p 8080:80 --name review_circleci_static $DOCKER
 set +e
 npm run protractor
 EXIT_STATUS=$?
-docker rm $(docker stop $STATIC_CONTAINER $APP_CONTAINER $POSTGRES_CONTAINER)
+docker stop $POSTGRES_CONTAINER; sleep 3; docker rm $POSTGRES_CONTAINER
+docker stop $APP_CONTAINER; sleep 3; docker rm $APP_CONTAINER
+docker stop $STATIC_CONTAINER; sleep 3; docker rm $STATIC_CONTAINER
 exit $EXIT_STATUS
