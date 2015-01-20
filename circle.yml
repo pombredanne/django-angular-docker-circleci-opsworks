@@ -31,8 +31,8 @@ deployment:
       - docker push $DOCKERHUB_STATIC_IMAGE_NAME:$DOCKERHUB_STATIC_IMAGE_TAG
       - docker push $DOCKERHUB_APP_IMAGE_NAME:$DOCKERHUB_APP_IMAGE_TAG
       # Deploy static first to avoid dependency problems
-      - python3 deploy_to_opsworks.py static
-      - python3 deploy_to_opsworks.py app
+      # python3 deploy_to_opsworks.py static
+      # python3 deploy_to_opsworks.py app
       - git checkout master
       - git fetch origin master
       - git reset --hard origin/master
